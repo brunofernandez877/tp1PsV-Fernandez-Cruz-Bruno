@@ -17,7 +17,7 @@
     <div class="container">
         <div class="section">
             <h2>Envíanos tu mensaje</h2>
-            <form action="#" method="POST">
+            <form id="form-contacto">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -27,7 +27,7 @@
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="button" onclick="FORM()">Enviar</button>
             </form>
         </div>
     </div>
@@ -36,5 +36,22 @@
         <p>© 2025 Contacto - Todos los derechos reservados.</p>
     </footer>
 
+    <script>
+        function FORM() {
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            console.log("Formulario enviado:");
+            console.log("Nombre:", nombre);
+            console.log("Email:", email);
+            console.log("Mensaje:", mensaje);
+
+            alert("¡Mensaje enviado! Revisá la consola del navegador.");
+        }
+    </script>
+
 </body>
 </html>
+
+
