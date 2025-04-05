@@ -27,7 +27,7 @@
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-                <button type="button" onclick="FORM()">Enviar</button>
+                <button type="submit" onclick="FORM()">Enviar</button>
             </form>
         </div>
     </div>
@@ -38,6 +38,7 @@
 
     <script>
         function FORM() {
+            event.preventDefault();
             const nombre = document.getElementById("nombre").value;
             const email = document.getElementById("email").value;
             const mensaje = document.getElementById("mensaje").value;
