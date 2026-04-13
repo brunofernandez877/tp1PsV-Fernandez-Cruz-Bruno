@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="CSS/contacto.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Formulario de Contacto</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Envíanos tu mensaje</h2>
+            <form id="form-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit" onclick="FORM()">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Contacto - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function FORM() {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            console.log("Formulario enviado:");
+            console.log("Nombre:", nombre);
+            console.log("Email:", email);
+            console.log("Mensaje:", mensaje);
+
+            alert("¡Mensaje enviado! Revisá la consola del navegador.");
+        }
+    </script>
+
+</body>
+</html>
+
+
